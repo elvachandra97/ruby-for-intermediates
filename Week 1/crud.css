@@ -1,0 +1,29 @@
+label {
+    font-size: 20px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#submit-form-button {
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
+    padding: 10px 10px;
+    border-radius: 20px;
+    border: thin;
+    background-color: seagreen;
+}
+
+#back-button {
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
+    padding: 10px 10px;
+    border-radius: 20px;
+    border: thin;
+    background-color: royalblue;
+    text-decoration: none;
+}
+
