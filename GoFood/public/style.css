@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+label {
+    font-size: 20px;
+}
+
+#food-table {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-collapse: collapse;
+}
+
+#food-table, th, td {
+    border: 1px solid black;
+}
+
+#food-table th {
+    height: 40px;
+    align-content: center;
+    background-color: burlywood;
+    font-size: 20px;
+}
+
+#food-table #content td {
+    padding: 10px;
+    background-color: beige;
+}
+
+#add-button {
+    font-weight: bold;
+    color: white;
+    font-size: 13px;
+    padding: 10px 10px;
+    border-radius: 20px;
+    border: thin;
+    background-color:royalblue;
+    text-decoration: none;
+}
+
+#detail-button, #edit-button {
+    font-weight: bold;
+    color: white;
+    font-size: 13px;
+    padding: 8px 8px;
+    border-radius: 15px;
+    border: thin;
+    background-color: royalblue;
+    text-decoration: none;
+}
+
+#delete-button {
+    font-weight: bold;
+    color: white;
+    font-size: 13px;
+    padding: 8px 8px;
+    border-radius: 15px;
+    border: thin;
+    background-color: red;
+    text-decoration: none;
+}
+
+#submit-form-button {
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
+    padding: 10px 10px;
+    border-radius: 20px;
+    border: thin;
+    background-color: seagreen;
+}
+
+#general-button {
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
+    padding: 10px 10px;
+    border-radius: 20px;
+    border: thin;
+    background-color: royalblue;
+    text-decoration: none;
+}

@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=<%='./style.css'%>>
+    <title>Food List</title>
+</head>
+
+<body>
+    <h1>Food List</h1>
+
+    <a href="./addFood" id="add-button">Add New Food</a><br>
+    <table id="food-table">
+        <tr>
+            <th><strong>Name</strong></th>
+            <th><strong>Price</strong></th>
+            <th><strong>Action</strong></th>
+        </tr>
+        
+        <tr id="content">
+            <td>Nasi Goreng</td>
+            <td>10.000</td>
+            <td>
+                <a href="./foodDetail" id="detail-button">Details</a>
+                <a href="./editFood" id="edit-button">Edit</a>
+                <a href="#" id="delete-button">Destroy</a>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
