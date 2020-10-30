@@ -8,14 +8,48 @@ get '/items' do
     }
 end
 
-get '/items/new' do
-    erb :create
+get '/items/showItemDetail/:id' do
+    id = params['id']
+    item = get_item(id)
+    erb :items_detail, locals: {
+        item: item
+    }
 end
 
-post '/items/create' do
+get '/items/addItem' do
+    categories = get_all_categories
+    erb :create, locals: {
+        categories: categories
+    }
+end
+
+post '/items/createItem' do
     name = params['name']
     price = params['price']
-    create_new_item(name, price)
+    create_item(name, price)
     redirect '/items'
 end
 
+get '/items/:id/edit' do
+    id = params['id']
+    item = get_item(id)
+    categories = get_all_categories
+    erb :edit, locals: {
+        item: item,
+        categories: categories
+    }
+end
+
+put '/items/:id/editItem' do
+    id = params['id']
+    name = params['name']
+    price = params['price']
+    edit_item(id, name, price)
+    redirect '/items'
+end
+
+delete '/items/deleteItem/:id' do
+    id = params['id']
+    delete_item(id)
+    redirect '/items'
+end

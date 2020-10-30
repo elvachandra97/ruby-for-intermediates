@@ -1,15 +1,27 @@
-<html>  
-    <head>
-        <title>New Item</title>
-    </head>
-    <body>
-        <h1>Create a New Item</h1>
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>New Item</title>
+   </head>
+   
+   <body>
+      <h1>Create a New Item</h1>
 
-        <form action="/items/create" method="POST">
-            <input name="name" type="text" placeholder="Item Name">
-            <input name="price" type="text" placeholder="Item Price">
-
-            <button type="submit">Add Item</button>
-        </form>
-    </body>
+      <form action="/items/createItem" method="POST">
+         <input name="name" type="text" placeholder="Item Name">
+         <input name="price" type="text" placeholder="Item Price">
+         
+         <label for="category-option">Category: </label>
+         <select name="category-option" id="category-option">
+            <% categories.each do |category| %>
+               <option value="<%= category.name %>"><%= category.name %></option>
+            <% end %>
+         </select>
+            
+         <button type="submit">Add Item</button>
+         <button class="back-button"><a href="/items">Back</a></button>
+      </form>
+   </body>
 </html>

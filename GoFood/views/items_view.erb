@@ -1,28 +1,35 @@
 <html>
    <head>
+   <link rel="stylesheet" href=<%='./style.css'%>>
       <title>Item List</title>
    </head>
 
    <body>
       <h1>List of Items</h1>
-      <table>
+      <button class='add-button'><a href="/items/addItem">New Item</a></button><br>
+      <table id="food-table">
          <thead>
             <tr>
                <th>Name</th>
                <th>Price</th>
-               <th colspan="3"></th>
+               <th colspan="4"></th>
             </tr>
          </thead>
 
          <tbody>
             <% items.each do |item| %>
                <tr>
-                  <th>Name</th>
-                  <th>Price</th>
-                  <th colspan="3"></th>
+                  <td><%= item.name %></td>
+                  <td><%= item.price %></td>
+                  <td><a href="/items/showItemDetail/<%= item.id %>">Show</a></td>
+                  <td><a href="/items/<%= item.id %>/edit">Edit</a></td>
+                  <td>
+                     <form action="/items/deleteItem/<%= item.id %>" method="POST">
+                           <button class="delete-button" type="submit">Delete</button>
+                     </form>
+                  </td>
                </tr>
             <% end %>
-            <a href="/items/new">New Item</a>
          </tbody>
       </table>
    </body>

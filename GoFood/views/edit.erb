@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Item</title>
+</head>
+
+<body>
+  <h1>Edit <%= item.name %></h1>
+
+    <form action="/items/<%= item.id %>/editItem" method="PUT">
+      <h4>Previous Item Detail</h4>
+      <label for="foodName">Food Name: <%= item.name %></label><br>
+      <label for="foodPrice">Food Price: <%= item.price %></label><br>
+      <label for="foodCategory">Food Category: <%= item.category.name %></label><br><br>
+
+
+      <h4>New Item Detail</h4>
+      <input name="name" type="text" placeholder="New Item Name">
+      <input name="price" type="text" placeholder="New Item Price">
+      <label for="category-option">Category: </label>    
+      <select name="category-option" id="category-option">
+        <% categories.each do |category| %>
+          <option value="<%= category.name %>"><%= category.name %></option>
+        <% end %>
+      </select>
+
+      <button type="submit">Update Item</button>
+      <button class="back-button"><a href="/items">Back</a></button>
+  </form>
+</body>
+</html>
