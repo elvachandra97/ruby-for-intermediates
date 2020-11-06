@@ -22,7 +22,7 @@
       <label for="category-option">Category: </label>    
       <select name="category-option" id="category-option">
         <% categories.each do |category| %>
-          <option value="<%= category.name %>"><%= category.name %></option>
+          <option value="<%= category.id %>"><%= category.name %></option>
         <% end %>
       </select>
 
